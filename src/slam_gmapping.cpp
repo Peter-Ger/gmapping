@@ -386,7 +386,7 @@ bool
 SlamGMapping::getOdomPose(GMapping::OrientedPoint& gmap_pose, const ros::Time& t)
 {
   // Get the pose of the centered laser at the right time
-  centered_laser_pose_.stamp_ = t;
+  centered_laser_pose_.stamp_ = t;     //及时得到中心点的位置
   // Get the laser's pose that is centered
   tf::Stamped<tf::Transform> odom_pose;
   try
